@@ -13,4 +13,14 @@ RSpec.feature 'Managing Posts' do
     expect(page).to have_selector 'post', count: 3
   end
 
+
+  scenario 'Create a post' do
+    visit '/posts/new'
+
+    fill_in 'Title', with: 'Brilliant Billiance'
+    fill_in 'Body', with: "lorem ipsum ness"
+    click_on 'Create Post'
+
+    expect(page).to have_content(/success/i)
+  end
 end
