@@ -23,4 +23,28 @@ RSpec.feature 'Managing Posts' do
 
     expect(page).to have_content(/success/i)
   end
+
+   scenario 'Read a post' do
+    post = Post.create!(title: 'Brilliant Posts', body: "HAPPY HAPPY job job")
+
+    visit "/posts/#{post.id}"
+
+    expect(page.find('h1')).to have_content 'Brilliant Posts'
+    expect(page).to have_content "HAPPY HAPPY job job"
+  end
+
+  scenario 'Update a post' do
+    post = Post.create!(title: 'Brilliant Posts', body: "HAPPY HAPPY job job")
+
+    visit "posts/#{post.id}/edit"
+
+    fill_in 'Title', with: 'Brilliant Posts'
+    fill_in 'Body', with: 'HAPPY HAPPY job job'
+    click_on 'Update Post'
+
+    expect(page).to have_content(/success/i)
+    expect(page.find('h1')).to have_content 'Brilliant Posts'
+    expect(page).to have_content 'HAPPY HAPPY job job'
+  end
+
 end

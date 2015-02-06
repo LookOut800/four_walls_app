@@ -16,14 +16,33 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      flash[:success] = 'Post successfully created.'
+      flash[:success] = 'Post successfully created'
       redirect_to post_path(@post)
     else
       render :new
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
 
+  def update
+    @post = Post.find(params[:id])
+
+    if @post.update_attributes(post_params)
+      flash[:success] = 'Post successfully updated.'
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    Post.find(params[:id]).destroy
+    flash[:success] = 'Post successfully deleted.'
+    redirect_to post_path
+  end
 
   private
 
