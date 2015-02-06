@@ -1,3 +1,6 @@
 <h1>Edit Posts!!</h1>
 
 <%= render 'form' %>
+
+<%= button_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Delete this post?' } %>
+

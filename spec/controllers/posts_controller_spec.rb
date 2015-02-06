@@ -159,4 +159,18 @@ RSpec.describe PostsController do
     end
   end
 
+    describe 'DELETE destroy' do
+    it 'destroys the requested post' do
+      post = Post.create!(valid_attributes)
+      expect {
+        delete :destroy, id: post
+      }.to change(Post, :count).by(-1)
+    end
+
+    it 'redirects to the articles list' do
+      post = Post.create!(valid_attributes)
+      delete :destroy, id: post
+      expect(response).to redirect_to posts_url
+    end
+  end
 end

@@ -13,7 +13,6 @@ RSpec.feature 'Managing Posts' do
     expect(page).to have_selector 'post', count: 3
   end
 
-
   scenario 'Create a post' do
     visit '/posts/new'
 
@@ -47,4 +46,13 @@ RSpec.feature 'Managing Posts' do
     expect(page).to have_content 'HAPPY HAPPY job job'
   end
 
+  scenario 'Delete an post' do
+    post = Post.create!(title: 'Brilliant Ness', body: "Happyness, its a warm...")
+
+    visit "posts/#{post.id}/edit"
+
+    click_on 'Delete Post'
+
+    expect(page).to have_content(/success/i)
+  end
 end
