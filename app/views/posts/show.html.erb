@@ -8,13 +8,15 @@
   <tr>
     <td><%= @post.title %><br></td>
     <td><%= @post.body %><br></td>
-    <td><%= image_tag @post.image.url(:medium) %><br></td>
+    <td><%= image_tag @post.image.url(:large) %><br></td>
     <td><%= link_to 'Back', posts_path %></td>
     <td><%= link_to 'Edit', edit_post_path(@post) %></td>
-    <td><%= link_to 'Destroy', post_path(@post),
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %></td>
   </tr>
+
+<% @post.comments.each do |comment| %>
+<div>  <%= comment.body %><br>
+</div>
+<% end %>
 
 
 <%= form_for [@post, @post.comments.new] do |f| %>
@@ -25,6 +27,3 @@
     <%= f.submit %>
 <% end %>
 
-<% @post.comments.each do |comment| %>
-  <%= comment.body %><br>
-  <% end %>
