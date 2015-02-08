@@ -6,33 +6,23 @@ class CommentsController < ApplicationController
   def new
   end
 
-  def create
-    @comment = Comment.new(comment_params)
-    @comment.post = Post.find(params[:post_id])
-    if @comment.save
-      redirect_to post_path(@comment.post_id)
-    else
-      flash[:error] = "Comment can't be blank"
-      redirect_to post_path(@comment.post_id)
-    end
+def create
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(comment_params)
+    redirect_to post_path(@post)
   end
 
   def edit
   end
 
   def update
-    if @comment.update(comment_params)
-      redirect_to post_path(@comment.post_id)
-    else
-      flash[:error] = "Comment can't be blank"
-      redirect_to post_path(@comment.post_id)
-    end
   end
 
   def destroy
-    post = @comment.post
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
     @comment.destroy
-    redirect_to post_path(post.id)
+    redirect_to post_path(@post)
   end
 
   private
