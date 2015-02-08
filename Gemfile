@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
+ruby '2.2.0'
 gem 'bourbon'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem 'aws-sdk'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -46,5 +49,12 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'rails_12factor'
+  gem 'rails_stdout_logging'
+  gem 'rails_serve_static_assets'
 end
 
