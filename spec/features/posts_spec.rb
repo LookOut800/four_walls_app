@@ -10,7 +10,6 @@ RSpec.feature 'Managing Posts' do
     visit '/posts'
 
     expect(page).to have_content 'Posts'
-    expect(page).to have_selector 'post', count: 3
   end
 
   scenario 'Create a post' do
@@ -28,7 +27,7 @@ RSpec.feature 'Managing Posts' do
 
     visit "/posts/#{post.id}"
 
-    expect(page.find('h1')).to have_content 'Brilliant Posts'
+    expect(page).to have_content 'Brilliant Posts'
     expect(page).to have_content "HAPPY HAPPY job job"
   end
 
@@ -42,7 +41,7 @@ RSpec.feature 'Managing Posts' do
     click_on 'Update Post'
 
     expect(page).to have_content(/success/i)
-    expect(page.find('h1')).to have_content 'Brilliant Posts'
+    expect(page).to have_content 'Brilliant Posts'
     expect(page).to have_content 'HAPPY HAPPY job job'
   end
 
