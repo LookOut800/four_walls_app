@@ -17,3 +17,14 @@
   </tr>
 
 
+<%= form_for [@post, @post.comments.new] do |f| %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+
+    <%= f.submit %>
+<% end %>
+
+<% @post.comments.each do |comment| %>
+  <%= comment.body %><br>
+  <% end %>
