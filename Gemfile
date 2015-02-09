@@ -3,7 +3,7 @@ ruby '2.2.0'
 gem 'bourbon'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-
+gem 'fog'
 gem 'aws-sdk'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
