@@ -1,14 +1,22 @@
-<h1> Posts </h1>
-<%= link_to 'new post',new_post_path %>
-<table>
-  <% @posts.each do |post| %>
-   <tr>
-      <td>
-        <%= post.title %><br>
-        <%= post.body %><br>
-        <%= image_tag post.image.url(:medium) %><br>
-        <%= link_to 'Show', post_path(post) %>
-      </td>
-    </tr>
-<% end %>
-</table>
+<body>
+  <div class="container home-index-wrapper">
+    <div class="header">
+    <h1> Posts </h1>
+    </div>
+      <div class="main-content"
+      <%= link_to 'new post',new_post_path %>
+        <table class="posts-index">
+          <% @posts.each do |post| %>
+          <tr>
+            <td>
+              <%= post.title %><br>
+              <%= post.body %><br>
+              <%= image_tag post.image.url(:medium) %><br>
+              <%= link_to 'Show', post_path(post) %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</body>
