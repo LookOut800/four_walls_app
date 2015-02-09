@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@comment.post_id)
     else
-      render :edit
+      flash[:error] = "Comment can't be blank"
+      redirect_to post_path(@comment.post_id)
     end
   end
 
@@ -23,7 +24,8 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to post_path(@comment.post_id)
     else
-      render :edit
+      flash[:error] = "Comment can't be blank"
+      redirect_to post_path(@comment.post_id)
     end
   end
 
