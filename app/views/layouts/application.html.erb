@@ -13,7 +13,11 @@
 
     <div class="top-border">
     </div>
-
+    <nav class="left-nav">
+      <div class="site-link"><%= link_to 'new post',new_post_path, :class => "left-nav-element" %></div>
+      <div class="site-link"><%= link_to 'HE  ROS', posts_path, :class => "left-nav-element" %></div>
+      <div class="site-link"><%= link_to '???', posts_path, :class => "nav-elements" %></div>
+    </nav>
 
     <%= render 'flash' %>
 

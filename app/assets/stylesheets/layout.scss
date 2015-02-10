@@ -19,17 +19,27 @@ body {
   text-decoration: none;
   color: #FFF;
 }
+.left-nav {
+  position: fixed;
+  width: 150px;
+  margin-top: 30px;
+}
 .posts-border {
   border-left: 1px solid black;
-
 }
 .top-border {
-
 }
-// .layout-lines {
-//   border-left: 1px solid black;
-//   border-right: 1px solid black;
-//   width: 900px;
-//   background-color: #FFF;
-//   margin: 0 auto 0 auto;
-// }
+.site-link {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid black;
+}
+.left-nav-element {
+  font-size: 40px;
+  text-decoration: none;
+  text-transform: lowercase;
+  color: #999;
+}
