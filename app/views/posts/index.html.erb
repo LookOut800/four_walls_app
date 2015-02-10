@@ -1,20 +1,27 @@
+<head>
+  <title>artposts</title>
+</head>
+
 <body>
   <div class="container home-index-wrapper">
-    <div class="header">
-    <h1> Posts </h1>
+    <div class="left-nav">
+      <%= link_to 'new post',new_post_path, :class => "nav-elements" %>
+      <%= link_to 'links ???',new_post_path, :class => "nav-elements" %>
     </div>
-      <div class="main-content"
-      <%= link_to 'new post',new_post_path %>
-        <table class="posts-index">
-          <% @posts.each do |post| %>
-          <tr>
-            <td>
-              <%= post.title %><br>
-              <%= post.body %><br>
-              <%= image_tag post.image.url(:medium) %><br>
-              <%= link_to 'Show', post_path(post) %>
-            </td>
-          </tr>
+    <div class="header">
+    <h1 class="title">  </h1>
+    </div>
+    <div class="posts-left">
+      <table class="posts-index">
+        <% @posts.each do |post| %>
+        <div>
+          <div class="posts">
+            <%= image_tag post.image.url(:large) %><br>
+            <%= post.title %> :
+            <%= post.body %>
+            <%= link_to 'Check this out', post_path(post) %>
+          </div>
+        </div>
         <% end %>
       </table>
     </div>

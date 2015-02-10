@@ -7,10 +7,19 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-  <nav>
-    <%= link_to 'FOUR WALLS', root_path %>
+    <nav class="nav-bar">
+        <%= link_to 'FOUR WALLS', root_path, :class => "logo" %>
     </nav>
+
+    <div class="top-border">
+    </div>
+
+
     <%= render 'flash' %>
+
     <%= yield %>
+
+    <aside> FOUR </aside>
+
   </body>
 </html>

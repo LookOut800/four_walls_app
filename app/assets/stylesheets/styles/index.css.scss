@@ -1,0 +1,42 @@
+body {
+  font-family: $verdana;
+  background-color: #fcfcfd;
+  margin: 0;
+}
+.left-nav {
+  position: fixed;
+  float: left;
+  width: 100px;
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid black;
+}
+.nav-elements {
+  font-size: 40px;
+  padding-left: 30px;
+  text-decoration: none;
+  color: #999;
+}
+.posts-left {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 900px;
+  display: block ;
+  background-color: #FFF;
+  margin: 0 auto 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: #21212A;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.posts {
+  text-align: center;
+  background-color: #fcfcfd;
+}
+.header {
+  border-bottom: 1px solid black;
+}

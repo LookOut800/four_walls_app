@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_attached_file :image, styles: { large: "800x800>", medium: "400x400>", thumbnail: "150x150#" },
       :bucket => 'fourthwallappbucket',
                     :s3_credentials => {

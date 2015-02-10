@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(params[:post])
 
     if @post.save
       flash[:success] = 'Post successfully created'
@@ -39,6 +39,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    # @post.image.destroy
     Post.find(params[:id]).destroy
     flash[:success] = 'Post successfully deleted.'
     redirect_to posts_path
