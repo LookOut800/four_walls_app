@@ -1,14 +1,20 @@
 // @import bourbon
-
+body {
+  font-family: $verdana;
+  background-color: #fcfcfd;
+  margin: 0;
+}
 .nav-bar {
   font-family: verdana;
   text-shadow: #444 3px 3px;
   margin: 0;
   height: 50px;
   text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
 }
 .logo {
-  font-size: 40px;
+  font-size: 50px;
   padding-left: 30px;
   text-decoration: none;
   color: #FFF;
@@ -20,3 +26,10 @@
 .top-border {
 
 }
+// .layout-lines {
+//   border-left: 1px solid black;
+//   border-right: 1px solid black;
+//   width: 900px;
+//   background-color: #FFF;
+//   margin: 0 auto 0 auto;
+// }

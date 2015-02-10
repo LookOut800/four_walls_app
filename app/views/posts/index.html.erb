@@ -13,13 +13,19 @@
     </div>
     <div class="posts-left">
       <table class="posts-index">
-        <% @posts.each do |post| %>
+        <% @posts.reverse.each do |post| %>
         <div>
           <div class="posts">
-            <%= image_tag post.image.url(:large) %><br>
-            <%= post.title %> :
-            <%= post.body %>
-            <%= link_to 'Check this out', post_path(post) %>
+          <%= link_to post_path(post) do %>
+            <%= image_tag post.image.url(:medium) %><br>
+            <% end %>
+
+            <div class="post-title"><%= post.title %></div>
+            <div class="post-body">
+              <p><%= post.body %></p>
+              <p><%= post.artist %></p>
+              <p><%= post.venue %></p>
+            </div>
           </div>
         </div>
         <% end %>

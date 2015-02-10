@@ -1,29 +1,26 @@
-<h1>POSTPOSTPOST</h1>
+<head></head>
+<body>
 
-<tr>
-  <th>Title</th>
-  <th>Text</th>
-  <th colspan="3"></th>
-</tr>
-  <tr>
-    <td><%= @post.title %><br></td>
-    <td><%= @post.body %><br></td>
-    <td><%= image_tag @post.image.url(:large) %><br></td>
-    <td><%= link_to 'Back', posts_path %></td>
-    <td><%= link_to 'Edit', edit_post_path(@post) %></td>
-  </tr>
+<div class="posts-left">
+  <h1 class="post-show"><%= @post.title %></h1>
 
-<% @post.comments.each do |comment| %>
-<div>  <%= comment.body %><br>
+  <div class="posts"><%= image_tag @post.image.url(:large) %></div>
+  <div class="show-post-title"><%= @post.title %>|<%= @post.body %><br></div>
+  <div class="show-link"><%= link_to 'Back', posts_path %> | <%= link_to 'Edit', edit_post_path(@post) %></div>
+
 </div>
-<% end %>
 
+  <% @post.comments.each do |comment| %>
+  <div class="comment-body"><%= comment.body %></div>
+  <% end %>
 
-<%= form_for [@post, @post.comments.new] do |f| %>
+<div class="comment-form">
+  <%= form_for [@post, @post.comments.new] do |f| %>
 
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
 
-    <%= f.submit %>
-<% end %>
-
+      <%= f.submit %>
+  <% end %>
+</div>
+</body>
