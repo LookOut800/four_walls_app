@@ -7,22 +7,19 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <nav class="nav-bar">
+    <nav class="header">
       <%= link_to 'FOUR WALLS', root_path, :class => "logo" %>
     </nav>
 
-    <div class="top-border">
-    </div>
-    <nav class="left-nav">
+
+    <div class="left-nav-bar">
       <div class="site-link"><%= link_to 'new post',new_post_path, :class => "left-nav-element" %></div>
-      <div class="site-link"><%= link_to 'HE  ROS', posts_path, :class => "left-nav-element" %></div>
+      <div class="site-link"><%= link_to 'HS', posts_path, :class => "left-nav-element" %></div>
       <div class="site-link"><%= link_to '???', posts_path, :class => "nav-elements" %></div>
-    </nav>
+    </div>
 
     <%= render 'flash' %>
 
     <%= yield %>
-
-      <aside> FOUR </aside>
   </body>
 </html>

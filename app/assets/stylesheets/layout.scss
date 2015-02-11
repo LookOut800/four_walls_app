@@ -4,10 +4,10 @@ body {
   background-color: #fcfcfd;
   margin: 0;
 }
-.nav-bar {
+.header {
   font-family: verdana;
   text-shadow: #444 3px 3px;
-  margin: 0;
+  margin: 0 0 0 0;
   height: 50px;
   text-align: center;
   padding-bottom: 15px;
@@ -16,18 +16,18 @@ body {
 .logo {
   font-size: 50px;
   padding-left: 30px;
+  padding-bottom: 15px;
   text-decoration: none;
   color: #FFF;
 }
-.left-nav {
-  position: fixed;
+.left-nav-bar {
+  float: left;
   width: 150px;
-  margin-top: 30px;
+  height: 100%;
+  margin-top: 15px;
 }
 .posts-border {
   border-left: 1px solid black;
-}
-.top-border {
 }
 .site-link {
   position: relative;
@@ -38,8 +38,37 @@ body {
   border: 1px solid black;
 }
 .left-nav-element {
+  width: 130px;
   font-size: 40px;
   text-decoration: none;
   text-transform: lowercase;
   color: #999;
 }
+.form-container {
+  width: 500px;
+}
+.form-label {
+  float: left;
+  margin: 15px;
+ font-family: "Lucida Console", Courier, monospace;
+  color: #000;
+  font-size: 20px;
+}
+.form {
+  float: right;
+  margin-bottom:8px;
+  padding: 10px;
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+}
+.form-btn {
+ float: left;
+ padding: 10px;
+}
+.submit-btn {
+  margin: 10px;
+  float: right;
+}
+

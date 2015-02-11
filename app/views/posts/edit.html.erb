@@ -1,7 +1,8 @@
-<h1>Edit Posts!!</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Delete this post?' } %>
-<%= link_to 'Back', posts_path %>
-
+<div class="new-post-main-div">
+  <div class="new-post-header">
+  <h1>Edit Post</h1>
+  </div>
+  <div class="new-post-form">
+  <%= render 'form' %>
+  </div>
+</div>

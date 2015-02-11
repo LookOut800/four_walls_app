@@ -1,11 +1,13 @@
+<div class="form-container">
 <%= form_for [@post, @comment] do |f| %>
 <div>
-    <%= f.label :body %>
+    <%= f.label :body, :class => "form" %>
   </div>
   <div>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :class => "form" %>
   </div>
   <div>
     <%= f.submit %>
     </div>
 <% end %>
+</div>
