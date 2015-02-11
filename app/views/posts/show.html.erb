@@ -8,15 +8,15 @@
   <div class="show-post-title"><%= @post.title %>|<%= @post.body %><br></div>
   <div class="show-link"><%= link_to 'Back', posts_path %> | <%= link_to 'Edit', edit_post_path(@post) %></div>
 
-</div>
+  </div>
 
   <% @post.comments.each do |comment| %>
   <div class="comment-body"><%= comment.body %></div>
   <% end %>
 
-<div class="comment-form">
-  <%= form_for [@post, @post.comments.new] do |f| %>
 
+  <%= form_for [@post, @post.comments.new] do |f| %>
+  <div class="comment-form">
       <%= f.label :body %>
       <%= f.text_area :body %>
 

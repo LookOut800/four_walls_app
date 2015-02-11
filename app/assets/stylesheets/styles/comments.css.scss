@@ -1,4 +1,11 @@
+.comment-body {
+  float: left;
+  border: 1px dashed black;
+  padding: 5px;
+  margin: 50px;
+}
+
 .comment-form {
-  float: bottom;
+  float: right;
   width: 600px;
 }
