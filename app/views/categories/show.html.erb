@@ -1,0 +1,6 @@
+
+<% @category.posts.each do |post| %>
+  <div class="category">
+  <%= link_to post.title, post_path(post) %>
+  <%= image_tag post.image.url(:thumbnail) %>
+<%end%>

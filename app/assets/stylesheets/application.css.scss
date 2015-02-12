@@ -1,7 +1,9 @@
 @import "bourbon";
 @import "layout";
-@import "styles/index";
-@import "styles/show";
-@import "styles/posts";
+@import "styles/posts/index";
+@import "styles/posts/show";
+@import "styles/posts/posts";
 @import "styles/comments";
-@import "styles/new"
+@import "styles/posts/new";
+@import "styles/categories/index";
+@import "styles/credits/index"

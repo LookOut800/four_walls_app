@@ -39,7 +39,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    # @post.image.destroy
     Post.find(params[:id]).destroy
     flash[:success] = 'Post successfully deleted.'
     redirect_to posts_path
@@ -48,6 +47,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :image)
+    params.require(:post).permit(:title, :body, :image, :comments, :categories, :all_categories)
   end
 end

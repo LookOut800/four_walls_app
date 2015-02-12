@@ -1,0 +1,9 @@
+<div class="categories-main">
+<% @categories.all.each do |cat| %>
+<div ><%= link_to cat.title, category_path(cat), :class => "category-element" %>
+</div>
+<% end %>
+</div>
+<div class="category-link-container">
+<%= link_to 'new', new_category_path, :class => "category-link" %><br>
+</div>

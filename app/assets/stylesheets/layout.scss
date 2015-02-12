@@ -3,6 +3,7 @@ body {
   font-family: $verdana;
   background-color: #fcfcfd;
   margin: 0;
+  height: 1500px;
 }
 .header {
   font-family: verdana;
@@ -24,7 +25,8 @@ body {
   float: left;
   width: 150px;
   height: 100%;
-  margin-top: 15px;
+  margin: 0 auto 0 auto;
+
 }
 .posts-border {
   border-left: 1px solid black;
@@ -34,15 +36,20 @@ body {
   width: 100px;
   height: 100px;
   margin: 10px;
-  padding: 15px;
-  border: 1px solid black;
+  padding: 5px;
+  border: 1px ridge black;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 .left-nav-element {
   width: 130px;
-  font-size: 40px;
+  font-size: 27px;
   text-decoration: none;
   text-transform: lowercase;
   color: #999;
+}
+.left-nav-element:hover {
+  color: gold;
 }
 .form-container {
   width: 500px;

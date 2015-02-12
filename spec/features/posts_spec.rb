@@ -9,7 +9,7 @@ RSpec.feature 'Managing Posts' do
 
     visit '/posts'
 
-    expect(page).to have_content 'Posts'
+    expect(page).to have_content 'post'
   end
 
   scenario 'Create a post' do

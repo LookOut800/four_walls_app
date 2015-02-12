@@ -1,11 +1,41 @@
-.comment-body {
+.post-comments-container {
   float: left;
-  border: 1px dashed black;
-  padding: 5px;
-  margin: 50px;
+  width: 100px;
+  padding: 25px;
+  margin: 15px;
 }
-
+.post-comments {
+  float: left;
+  display: block;
+  border: 1px dashed black;
+  padding: 10px;
+  margin: 10px;
+}
 .comment-form {
+  float: left;
+  display: block ;
+  margin: 0 auto 0 auto;
+  padding: 25px 0 0 0 0;
+  margin-top: 30px;
+  width: 200px;
+  height: 100px;
+}
+.comment-label {
+  width: 50px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+.comment-field {
+  width: 200px;
+  height: 25px;
+}
+.post-categories-container {
   float: right;
-  width: 600px;
+  width: 80px;
+  padding: 25px;
+  margin: 15px;
+}
+.bonkers {
+    text-decoration: none;
+  font-size: 35px;
+  color: gray;
 }

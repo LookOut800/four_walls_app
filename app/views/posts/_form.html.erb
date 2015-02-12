@@ -1,27 +1,23 @@
 <div class="form-container">
-<%= form_for @post, html: { multipart: true } do |f| %>
-  <div>
-    <%= f.label :title, :class => "form-label" %>
-    <%= f.text_field :title, :class => "form" %>
-  </div>
-<div>
-    <%= f.label :body, :class => "form-label" %>
-    <%= f.text_area :body, :class => "form" %>
-  </div>
-  <div>
-    <%= f.label :artist, :class => "form-label" %>
-    <%= f.text_area :artist, :class => "form" %>
-  </div>
+  <%= form_for @post, html: { multipart: true } do |f| %>
     <div>
-    <%= f.label :venue, :class => "form-label" %>
-    <%= f.text_area :venue, :class => "form" %>
-  </div>
+      <%= f.label :title, :class => "form-label" %>
+      <%= f.text_field :title, :class => "form" %>
+    </div>
     <div>
-    <%= f.label :image, :class => "form-label" %>
-    <%= f.file_field :image, :class => "form-btn" %>
-  </div>
-  <div>
-    <%= f.submit :class => "submit-btn" %>
-  </div>
-<% end %>
+      <%= f.label :body, :class => "form-label" %>
+      <%= f.text_area :body, :class => "form" %>
+    </div>
+    <div>
+      <%= f.label :artist, :class => "form-label" %>
+      <%= f.text_area :artist, :class => "form" %>
+    </div>
+    <div>
+      <%= f.label :image, :class => "form-label" %>
+      <%= f.file_field :image, :class => "form-btn" %>
+    </div>
+    <div>
+      <%= f.submit :class => "submit-btn" %>
+    </div>
+  <% end %>
 </div>
